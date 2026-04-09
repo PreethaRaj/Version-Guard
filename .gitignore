@@ -1,0 +1,39 @@
+# `.gitignore`
+
+```gitignore
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Coverage / temp
+.coverage
+htmlcov/
+.tmp/
+temp/
+
+# Build artifacts
+*.egg-info/
+build/

@@ -1,0 +1,18 @@
+services:
+  opensearch:
+    image: opensearchproject/opensearch:2.13.0
+    container_name: versionguard-opensearch
+    environment:
+      discovery.type: single-node
+      plugins.security.disabled: "true"
+      OPENSEARCH_JAVA_OPTS: "-Xms512m -Xmx512m"
+      OPENSEARCH_INITIAL_ADMIN_PASSWORD: cHangethispwd6$
+    ports:
+      - "9200:9200"
+      - "9600:9600"
+
+  redis:
+    image: redis:7-alpine
+    container_name: versionguard-redis
+    ports:
+      - "6379:6379"
