@@ -30,5 +30,5 @@ def test_nested_configuration():
             }
         ]
     }
-    assert is_configuration_vulnerable(configurations, "4.17.1")
-    assert not is_configuration_vulnerable(configurations, "4.20.0")
+    assert is_configuration_vulnerable(configurations, "4.17.1", "express")
+    assert not is_configuration_vulnerable(configurations, "4.20.0", "express")
